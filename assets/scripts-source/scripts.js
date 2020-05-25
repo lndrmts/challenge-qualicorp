@@ -175,7 +175,7 @@ function handleSubmit() {
               <p class="abrangencia"><strong>Abrangencia:</strong> ${
                 plan.abrangencia
               }</p>
-              <p class="precos"><strong>R$ 364,05</strong></p>
+              <p class="precos"><strong>R$ ${plan.precos.total}</strong></p>
               ${plan.precos.precos.map(
                 (preco) =>
                   `<table class="plan__prices">
