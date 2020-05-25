@@ -197,14 +197,18 @@ function handleSubmit() {
             document.getElementById(`id${plan.id}${index}`).innerHTML = html;
           });
         } else {
-          console.log(
-            "Problema ao buscar os resultados da API, tente novamente"
+          alert(
+            "Houve um problema na hora de buscar so dados, verifique todos os campos e tente novamente"
           );
         }
       })
       .catch(function (error) {
-        console.error(error);
+        console.log(error);
+        document.getElementById("loading").innerHTML =
+          "Houve um erro, verifique a data de nascimento e tente novamente";
         document.getElementById("buttonSubmit").classList.remove("no-click");
       });
+  } else {
+    alert("Todos os campos são obrigatórios.");
   }
 }

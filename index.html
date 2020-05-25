@@ -103,6 +103,8 @@
                   class="form__input data-mask"
                   placeholder="Dia"
                   maxlength="2"
+                  min="1"
+                  max="31"
                   required
                 />
                 <input
@@ -111,6 +113,8 @@
                   class="form__input data-mask"
                   placeholder="Mês"
                   maxlength="2"
+                  min="1"
+                  max="12"
                   required
                 />
                 <input
@@ -119,6 +123,8 @@
                   class="form__input data-mask"
                   placeholder="Ano"
                   maxlength="4"
+                  min="1920"
+                  max="2020"
                   required
                 />
               </div>
@@ -135,7 +141,6 @@
               id="buttonSubmit"
               class="form__button"
               type="button"
-              required
               onclick="handleSubmit()"
             >
               <span id="buttonText">Buscar</span>
