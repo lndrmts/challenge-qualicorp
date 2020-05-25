@@ -154,7 +154,6 @@ function handleSubmit() {
           const plansInitials = response.data;
 
           plansInitials.planos.map((plan, index) => {
-            console.log(plan);
             const createArticle = document.createElement("article");
             createArticle.classList.add("plan");
             createArticle.setAttribute("id", `id${plan.id}${index}`);
