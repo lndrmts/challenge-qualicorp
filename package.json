@@ -1,0 +1,22 @@
+{
+  "name": "qualicorp",
+  "version": "1.0.0",
+  "description": "Este é um projeto de teste de Frontend e consumo de API para Qualicorp",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-iconfont": "^10.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.1",
+    "gulp-webp": "^4.0.1",
+    "underscore": "^1.9.1"
+  }
+}

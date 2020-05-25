@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f1f8fe;
+}
+body,
+select,
+button,
+input {
+  font-family: "Noto Serif", serif;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  justify-content: center;
+}
+.container {
+  max-width: 799px;
+  margin: auto;
+  padding: 0 15px;
+}
+.header {
+  margin: 36px 0;
+  width: 100%;
+  &--display {
+    display: flex;
+    align-items: center;
+    p {
+      color: rgba($colorBlack, 0.5);
+    }
+  }
+}
+.filter {
+  margin-bottom: 32px;
+}
+#loading {
+  display: none;
+  &.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 36px 0;
+  }
+}

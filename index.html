@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index,follow" />
+
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:locale" content="" />
+
+    <link rel="icon" href="/" />
+
+    <title>Qualicorp | Teste de Frontend</title>
+
+    <link rel="stylesheet" href="/assets/styles/styles.min.css" media="all" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <div class="container">
+          <div class="header--display">
+            <picture>
+              <source srcset="assets/images/logo.webp" type="image/webp" />
+              <source srcset="assets/images/logo.png" type="image/png" />
+              <img src="assets/images/logo.jpg" alt="Alt Text!" />
+            </picture>
+
+            <p>| Teste de Frontend</p>
+          </div>
+        </div>
+      </header>
+      <section class="filter">
+        <div class="container">
+          <form class="form">
+            <div class="form__group form__uf_city">
+              <div class="item--first">
+                <label class="form__label">Estado*</label>
+                <select
+                  id="selectState"
+                  class="form__select"
+                  onchange="handleState(this.value)"
+                  required
+                >
+                  <option value="">
+                    UF
+                  </option>
+                </select>
+              </div>
+              <div class="item--last">
+                <label class="form__label">Cidade*</label>
+                <select
+                  id="selectCity"
+                  class="form__select"
+                  onchange="handleCity()"
+                  required
+                >
+                  <option>Cidade</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__group form__profession">
+              <label class="form__label">Profissão*</label>
+              <select
+                class="form__select"
+                id="selectProfession"
+                onchange="getEntity()"
+                required
+              >
+                <option>Profissão</option>
+              </select>
+            </div>
+
+            <div class="form__group form__birth">
+              <label class="form__label">Data de nascimento*</label>
+              <div class="form__birth--display">
+                <input
+                  id="inputBirthDay"
+                  type="number"
+                  class="form__input data-mask"
+                  placeholder="Dia"
+                  maxlength="2"
+                  required
+                />
+                <input
+                  id="inputBirthMonth"
+                  type="number"
+                  class="form__input data-mask"
+                  placeholder="Mês"
+                  maxlength="2"
+                  required
+                />
+                <input
+                  id="inputBirthYear"
+                  type="number"
+                  class="form__input data-mask"
+                  placeholder="Ano"
+                  maxlength="4"
+                  required
+                />
+              </div>
+            </div>
+            <input
+              id="inputEntity"
+              type="hidden"
+              value=""
+              id="entidade"
+              name="entidade"
+              required
+            />
+            <button
+              id="buttonSubmit"
+              class="form__button"
+              type="button"
+              required
+              onclick="handleSubmit()"
+            >
+              <span id="buttonText">Buscar</span>
+            </button>
+          </form>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div id="plans">
+            <h1>Utilize o formulário para encontrar os planos disponiveis</h1>
+          </div>
+          <span id="loading">Aguarde enquanto buscamos...</span>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        <small
+          >Todos os direitos reservados &copy;2020 - Este projeto foi construido
+          como teste de Frontend</small
+        >
+      </p>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer async src="/assets/scripts/scripts.min.js"></script>
+  </body>
+</html>

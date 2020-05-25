@@ -1,0 +1,80 @@
+.form {
+  display: flex;
+  @include desktop {
+    align-items: center;
+  }
+  @include mobile {
+    flex-direction: column;
+  }
+  &__group {
+    display: flex;
+    margin-bottom: 15px;
+    flex: 1;
+    @include desktop {
+      & + .form__group {
+        margin-left: 15px;
+      }
+    }
+    & > div {
+      flex: 1;
+    }
+  }
+  &__uf_city {
+    display: flex;
+    .item {
+      &--first {
+        flex: 0 0 80px;
+      }
+      &--last {
+        flex: 1;
+        margin-left: 15px;
+      }
+    }
+  }
+  &__button {
+    background-color: $colorBlue;
+    border: none;
+    font-size: 18px;
+    color: $colorWhite;
+    border-radius: 8px;
+    padding: 12px 16px;
+    cursor: pointer;
+    &:hover {
+      background-color: $colorYellow;
+      color: $colorBlue;
+    }
+    &:active {
+      box-shadow: 0 2px 4px rgba($colorBlack, 0.5) inset;
+    }
+    @include desktop {
+      margin-left: 15px;
+    }
+    &.no-click {
+      pointer-events: none;
+    }
+  }
+  &__profession,
+  &__birth {
+    flex-direction: column;
+  }
+  &__birth {
+    &--display {
+      display: flex;
+    }
+  }
+  &__label {
+    font-size: 18px;
+    color: $colorBlue;
+  }
+  &__select,
+  &__input {
+    padding: 12px;
+    border: 1px solid $colorBlue;
+    width: 100%;
+    flex: 1;
+    background-color: $colorWhite;
+    border-radius: 8px;
+    font-size: 16px;
+    color: lighten($colorBlack, 5);
+  }
+}
